@@ -1,2 +1,52 @@
-<iframe width="483" height="248" src="https://w2.countingdownto.com/3204473" frameborder="0"></iframe>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Peace Out</title>
+  </head>
+  <body>
+    <!-- Display the countdown timer in an element -->
+    <h1>Welcome</h1>
+    <p style="font-size:180%;">Thanks for checking my new countdown to the day where I move from
+      the IT Team to the AV team. It's been fun working with all of you.</p>
 
+<div class="">
+<p id="Peace Out"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 18, 2020 17:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("Peace Out").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("Peace Out").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    document.getElementById("Peace Out").style.color = "blue";
+    document.getElementById("Peace Out").style.fontSize = "1200%";
+
+</script>
+</div>
+
+  </body>
+</html>
